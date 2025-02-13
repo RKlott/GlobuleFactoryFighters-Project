@@ -74,8 +74,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -175,8 +174,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -moz-appearance: button;
-       appearance: button;
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -260,8 +258,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -moz-appearance: textfield;
-       appearance: textfield;
+  appearance: textfield;
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -397,8 +394,7 @@ template {
 .navbar .logo img {
   width: 4rem;
   height: 4rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .nav-links {
@@ -509,8 +505,7 @@ footer .footer_logo {
 }
 footer .footer_logo img {
   width: 14rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: white;
   border-radius: 50%;
 }
@@ -538,14 +533,14 @@ footer .footer_socialmedia .fill-gradient-instagram {
 footer .footer_socialmedia .fa-facebook {
   color: #397EE4;
   background-color: #FCFCFC;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   border-radius: 50%;
 }
 
 .index_main {
   width: 100%;
-  background-color: yellow;
-}/*# sourceMappingURL=main.css.map */
+  background-color: greenyellow;
+}
+
+/*# sourceMappingURL=main.css.map */

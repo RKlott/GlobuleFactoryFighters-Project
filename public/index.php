@@ -28,7 +28,7 @@ require './pages/components/header.php';
 ?>
 
 <main class="index_main">
-    <p>CECI EST LE MAIN</p>
+    <p>CECI EST LE SUPER MAIN</p>
 </main>
 
 <?php require './pages/components/footer.php' ?>
