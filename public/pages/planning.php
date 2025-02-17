@@ -24,9 +24,33 @@ $footer_logo = "../assets/images/gff-logo.png";
 //*js utilities
 $js_index_file_path = "../assets/js/index.js";
 
-require "./components/header.php"
+require "./components/header.php";
+
+$pdo = db::getInstance();
+// Récupérer l'image du planning depuis la base de données
+$stmt = $pdo->query("SELECT image_path FROM schedule WHERE id = 1");
+$schedule = $stmt->fetch(PDO::FETCH_ASSOC);
+
+//Génération dynamique de l'URL de l'image
+$baseUrl = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME'], 2);
+$imagePath = $baseUrl . "/assets/uploads/schedule/" . htmlspecialchars($schedule['image_path']);
+
 ?>
 
-<main></main>
+<main>
+<section class="index_header">
+        <div class="index_header_title_container">
+            <h3 class="underline-effect">PLANNING</h3>
+        </div>
 
-<?php require './components/footer.php' ?>;
+<div class="planning-container">
+    <?php if ($schedule && !empty($schedule['image_path'])): ?>
+        <img src="<?= $imagePath ?>" alt="Planning des entraînements" class="planning-image">
+
+    <?php else: ?>
+        <p>Aucun planning disponible pour le moment.</p>
+    <?php endif; ?>
+</div>
+</main>
+
+<?php require './components/footer.php' ?>

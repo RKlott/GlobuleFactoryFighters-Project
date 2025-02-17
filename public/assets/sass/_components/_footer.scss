@@ -53,6 +53,11 @@ footer {
     flex-direction: column;
     gap: 2rem;
     
+    @media (max-width: $breakpoint){
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      flex-direction: row;
+    }
 
     .fill-gradient-instagram {
         background-clip: text;

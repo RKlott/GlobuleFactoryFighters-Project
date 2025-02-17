@@ -28,7 +28,25 @@ require './pages/components/header.php';
 ?>
 
 <main class="index_main">
-    <p>CECI EST LE SUPER MAIN</p>
+    <section class="index_header">
+        <div class="index_header_title_container">
+            <h3 class="underline-effect">GLOBULE FACTORY FIGHTERS</h3>
+            <h4>Plus qu'une team, une famille</h4>
+        </div>
+
+        <div class="index_team_description">
+            <img src="./assets/images/gff-logo.png" alt="logo du club">
+            <p>Nos cours sont accessible à tous niveaux de pratique dès 15 ans ! <br>
+            Que vous n’aillez jamais pratiqué de sports de combat, ou que vous soyez <br>
+            compétiteur débutant ou confirmé, nous saurons vous accompagner <br>
+            vers vos objectifs.</p>
+        </div>
+
+    </section>
+
+
+
+
 </main>
 
 <?php require './pages/components/footer.php' ?>

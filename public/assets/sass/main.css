@@ -311,6 +311,23 @@ template {
   display: none;
 }
 
+.underline-effect {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Distance par rapport au texte */
+  width: 50%; /* Taille de la barre */
+  height: 1px; /* Épaisseur */
+  background-color: black;
+  transform: translateX(-50%);
+}
+
 /*//TODO: Le deuxième message se déplace plus vite que les autres et leurs passe dessus
 * //TODO: Corriger le bug pour que les messages de suivent sans se superposer
 *
@@ -523,6 +540,13 @@ footer .footer_socialmedia {
   flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  footer .footer_socialmedia {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+  }
+}
 footer .footer_socialmedia .fill-gradient-instagram {
   background-clip: text;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -541,6 +565,70 @@ footer .footer_socialmedia .fa-facebook {
 .index_main {
   width: 100%;
   background-color: greenyellow;
+}
+
+.index_header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.index_header .index_header_title_container {
+  text-align: center;
+  margin: 2rem 0;
+}
+.index_header .index_header_title_container h3,
+.index_header .index_header_title_container h4 {
+  margin: 0;
+}
+.index_header .index_header_title_container h3 {
+  font-size: 1.5rem;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.index_header .index_header_title_container h4 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.index_team_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+.index_team_description img {
+  max-width: 80%;
+}
+.index_team_description p {
+  text-align: center;
+}
+
+.planning-container {
+  text-align: center;
+  padding: 20px;
+}
+.planning-container .planning-image {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .planning-container .planning-image {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.planning-container p {
+  font-size: 1.2rem;
+  color: gray;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=main.css.map */

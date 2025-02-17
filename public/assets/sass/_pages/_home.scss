@@ -1,4 +1,43 @@
-.index_main{
-    width: 100%;
-    background-color: greenyellow;
+.index_main {
+  width: 100%;
+  background-color: greenyellow;
+}
+
+.index_header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .index_header_title_container {
+    text-align: center;
+    margin: 2rem 0;
+
+    h3,
+    h4 {
+      margin: 0;
+    }
+    h3{
+        font-size: 1.5rem;
+        @include poppins-medium-italic;
+    }
+    h4 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      @include poppins-extralight-italic;
+    }
+  }
+}
+
+.index_team_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    img{
+        max-width: 80%;
+    }
+    p{
+        text-align: center;
+    }
 }
