@@ -120,20 +120,20 @@ require './pages/components/header.php';
             <div>
                 <span>
                     <h3>LA CAGE</h3> <!--//TODO: Agrandir la taille des textes-->
-                    <p>Nous possédons à l’heure actuelle 
-                        la seule cage de MMA 
-                        en Sud-Gironde, idéale pour travailler 
-                        des thèmes précis axés 
-                        sur le contrôle et la gestion de la 
-                        distance en environnement délimité, 
-                        le travail de Lutte MMA (lutte contre 
-                        la cage), et pour la mise en situation 
+                    <p>Nous possédons à l’heure actuelle
+                        la seule cage de MMA
+                        en Sud-Gironde, idéale pour travailler
+                        des thèmes précis axés
+                        sur le contrôle et la gestion de la
+                        distance en environnement délimité,
+                        le travail de Lutte MMA (lutte contre
+                        la cage), et pour la mise en situation
                         pour nos compétiteurs. <br>
                         <br>
-                        Egalement utilisée lors des sessions 
-                        de cours privés de nos coachs, 
-                        elle reste disponible à l’utilisation sur 
-                        réservation à l’accueil de la salle à tout 
+                        Egalement utilisée lors des sessions
+                        de cours privés de nos coachs,
+                        elle reste disponible à l’utilisation sur
+                        réservation à l’accueil de la salle à tout
                         nos adhérents !
                     </p>
                 </span>
@@ -151,13 +151,14 @@ require './pages/components/header.php';
                 <img src="./assets/images/index-imgs/crosstraining-3-img.png" alt="image trois zone crosstraining globule fitness">
             </div>
 
-            <p>Notre espace Cross-Training a été pensée pour vous permettre de vous entraîner au mieux 
-            et de vous surpasser physiquement, avec tout nos équipements et accessoires divers, vous 
-            pourrez préparer vos séances de renforcement/préparation physique dans des conditions optimales 
-            seul, ou accompagné de nos coachs spécialiste en conditionnement & préparation physique ! <br>
-            <br>
-            Les préparations physique de nos compétiteurs sont orchestrés dans toute notre infrastructure, <br>
-            supervisées par notre Head-Coach et notre Préparateur physique dédié</p>
+            <p>Notre espace Cross-Training a été pensée pour vous permettre de vous entraîner au mieux
+                et de vous surpasser physiquement, avec tout nos équipements et accessoires divers, vous
+                pourrez préparer vos séances de renforcement/préparation physique dans des conditions optimales
+                seul, ou accompagné de nos coachs spécialiste en conditionnement & préparation physique ! <br>
+                <br>
+                Les préparations physique de nos compétiteurs sont orchestrés dans toute notre infrastructure, <br>
+                supervisées par notre Head-Coach et notre Préparateur physique dédié
+            </p>
         </div>
 
         <div class="index_musculation">
@@ -169,9 +170,9 @@ require './pages/components/header.php';
 
             <p>Découvrez un espace musculation pensé pour compléter votre pratique sportive générale. Doté d’équipements haut de gamme, cet espace vous permet de développer votre force, votre explosivité et votre endurance, des qualités essentielles pour performer et exceller. Accompagné par nos coachs expérimentés, vous bénéficierez de conseils adaptés à vos objectifs, que vous soyez compétiteur ou pratiquant passionné. Préparez-vous à repousser vos limites dans un cadre motivant et convivial !</p>
         </div>
-
-
     </section>
+
+<!--//TODO: Faire une image des tarifs et simplement l'insérer dans une section ici-->
 
 
 
