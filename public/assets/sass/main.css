@@ -1,4 +1,22 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.underline-effect {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Distance par rapport au texte */
+  width: 50%; /* Taille de la barre */
+  height: 1px; /* Épaisseur */
+  background-color: black;
+  transform: translateX(-50%);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -6,7 +24,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -311,23 +328,6 @@ template {
   display: none;
 }
 
-.underline-effect {
-  display: inline-block;
-  position: relative;
-  font-size: 20px;
-}
-
-.underline-effect::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -5px; /* Distance par rapport au texte */
-  width: 50%; /* Taille de la barre */
-  height: 1px; /* Épaisseur */
-  background-color: black;
-  transform: translateX(-50%);
-}
-
 /*//TODO: Le deuxième message se déplace plus vite que les autres et leurs passe dessus
 * //TODO: Corriger le bug pour que les messages de suivent sans se superposer
 *
@@ -607,6 +607,228 @@ footer .footer_socialmedia .fa-facebook {
 }
 .index_team_description p {
   text-align: center;
+}
+
+.index_discipline_info {
+  display: flex;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .index_discipline_info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.index_discipline_info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .index_discipline_info div {
+    margin-bottom: 2rem;
+  }
+}
+.index_discipline_info div img {
+  max-width: 60%;
+}
+.index_discipline_info div p {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .index_discipline_info div p {
+    max-width: 90%;
+  }
+}
+.index_discipline_info div button {
+  padding: 0.3rem 1.8rem;
+  background-color: #E1592C;
+  border-radius: 8px;
+  border-color: #110B0A;
+  box-shadow: 0px 4px 3.5px 0.5px rgba(0, 0, 0, 0.24);
+}
+.index_discipline_info div button a {
+  text-decoration: none;
+  color: #FCFCFC;
+}
+@media (max-width: 768px) {
+  .index_discipline_info div button {
+    padding: 0.5rem 2.8rem;
+  }
+}
+
+.index_team_softskills {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .index_team_softskills {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.index_team_softskills div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .index_team_softskills div {
+    margin-bottom: 3rem;
+  }
+}
+.index_team_softskills div img {
+  width: 55%;
+}
+.index_team_softskills div p {
+  font-size: medium;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.index_discover_us {
+  width: 90%;
+  margin: auto;
+}
+.index_discover_us h3 {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+}
+.index_discover_us div {
+  margin-bottom: 2rem;
+}
+.index_discover_us .index_presentation {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_presentation {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.index_discover_us .index_presentation img {
+  width: 35%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_presentation img {
+    width: 70%;
+  }
+}
+.index_discover_us .index_presentation span {
+  margin-left: 3rem;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_presentation span {
+    margin-left: 0;
+  }
+}
+.index_discover_us .index_presentation span h2 {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.index_discover_us .index_nos_installations {
+  display: flex;
+  flex-direction: column;
+}
+.index_discover_us .index_nos_installations h2 {
+  align-self: center;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.index_discover_us .index_nos_installations div {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_nos_installations div {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.index_discover_us .index_nos_installations div img {
+  margin-left: auto;
+  width: 60%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_nos_installations div img {
+    width: 90%;
+    margin-left: 0;
+  }
+}
+.index_discover_us .index_nos_installations div span {
+  width: 30%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_nos_installations div span {
+    width: 100%;
+  }
+}
+.index_discover_us .index_cross_training {
+  display: flex;
+  flex-direction: column;
+}
+.index_discover_us .index_cross_training div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_cross_training div {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+}
+.index_discover_us .index_cross_training div img {
+  width: 27%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_cross_training div img {
+    margin-bottom: 1rem;
+    width: 15rem;
+  }
+}
+.index_discover_us .index_musculation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.index_discover_us .index_musculation div {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_musculation div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.index_discover_us .index_musculation div img {
+  width: 48%;
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_musculation div img {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .index_discover_us .index_musculation div img:first-child {
+    margin-bottom: 1rem;
+  }
 }
 
 .planning-container {
