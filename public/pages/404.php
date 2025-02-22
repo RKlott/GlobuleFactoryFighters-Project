@@ -15,7 +15,7 @@ $index_page_path = "../index.php";
 $discipline_page_path = "./disciplines.php";
 $planning_page_path = "./planning.php";
 $team_page_path = "./team.php";
-$sponsors_page_path = "./sponsors.php";
+$sponsors_page_path = "./tarifs.php";
 $contact_page_path = "./contact.php";
 
 //? <footer>

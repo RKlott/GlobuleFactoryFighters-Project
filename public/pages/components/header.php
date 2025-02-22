@@ -52,7 +52,7 @@ $messages = getScrollingMessages($pdo);
                 <li><a href=<?= $discipline_page_path?>>DISCIPLINES</a></li>
                 <li><a href=<?= $planning_page_path?>>PLANNING</a></li>
                 <li><a href=<?= $team_page_path?>>TEAM</a></li>
-                <li><a href=<?= $sponsors_page_path?>>SPONSORS</a></li>
+                <li><a href=<?= $sponsors_page_path?>>TARIFS</a></li>
                 <li><a href=<?= $contact_page_path?>>CONTACT</a></li>
             </ul>
         </nav>
