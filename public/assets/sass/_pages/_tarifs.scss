@@ -10,5 +10,9 @@
         @media (max-width: 959px){
             padding-bottom: 2rem;
         }
+
+        @media (max-width: 370px){
+            max-width: 220px;
+        }
     }
 }

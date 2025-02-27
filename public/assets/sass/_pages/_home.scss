@@ -3,9 +3,6 @@ main{
   margin: auto;
 }
 
-.index_main {
-  background-color: greenyellow;
-}
 
 .index_header {
   display: flex;
@@ -59,7 +56,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+
     width: 100%;
 
     @media (max-width: $breakpoint) {

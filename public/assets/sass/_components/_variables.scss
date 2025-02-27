@@ -23,3 +23,20 @@ $footer-background-black: #282828;
     background-color: black;
     transform: translateX(-50%);
 }
+
+.white-underline-effect {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+
+.white-underline-effect::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Distance par rapport au texte */
+    width: 50%; /* Taille de la barre */
+    height: 1px; /* Épaisseur */
+    background-color: $main-white;
+    transform: translateX(-50%);
+}
