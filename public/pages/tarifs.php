@@ -28,12 +28,20 @@ require "./components/header.php"
 ?>
 
 <main>
+    <section class="index_header">
+        <div class="index_header_title_container">
+            <h3 class="underline-effect">TARIFS</h3>
+            <h4>Tarifs d'abonnements à la salle Globule Fitness</h4>
+        </div>
+    </section>
 
-<div class="tarif-container">
-<img class="tarif-img" src="../assets/images/tarifs-imgs/tarif.png" alt="">
-</div>
-    
+    <div class="tarif-container">
+        <img class="tarif-img" src="../assets/images/tarifs-imgs/tarif-liberte.png" alt="Photo tarif liberté">
+        <img class="tarif-img" src="../assets/images/tarifs-imgs/tarif-famille.png" alt="Photo tarif famille">
+        <img class="tarif-img" src="../assets/images/tarifs-imgs/tarif-mineurs.png" alt="Photo de tarif mineurs">
+    </div>
+
 
 </main>
 
-<?php require './components/footer.php' ?>;
+<?php require './components/footer.php' ?>

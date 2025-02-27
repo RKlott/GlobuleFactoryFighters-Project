@@ -836,7 +836,12 @@ main {
 
 .planning-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .planning-container {
+    padding: 5px;
+  }
 }
 .planning-container .planning-image {
   width: 100%;
@@ -844,7 +849,7 @@ main {
 }
 @media (min-width: 768px) {
   .planning-container .planning-image {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     display: block;
   }
@@ -857,12 +862,19 @@ main {
   font-style: italic;
 }
 
-.tarif-container .tarif-img {
-  width: 25%;
+.tarif-container {
+  display: flex;
+  margin: 1rem 0;
+  flex-wrap: wrap;
 }
-
-.team_main {
-  margin: 2rem 5%;
+.tarif-container .tarif-img {
+  max-width: 320px;
+  margin: auto;
+}
+@media (max-width: 959px) {
+  .tarif-container .tarif-img {
+    padding-bottom: 2rem;
+  }
 }
 
 .team_coach {
@@ -871,23 +883,58 @@ main {
 }
 .team_coach h2 {
   text-decoration: underline;
+  padding-left: 2rem;
+}
+@media (max-width: 768px) {
+  .team_coach h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .team_coach span {
+    padding-bottom: 1.5rem;
+  }
 }
 .team_coach div {
   width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 768px) {
+  .team_coach div {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
 .team_coach div img {
   max-width: 50%;
+}
+@media (max-width: 768px) {
+  .team_coach div img {
+    max-width: 80%;
+  }
 }
 .team_coach .mma_coach span {
   width: 100%;
   margin-left: 5%;
 }
 .team_coach .mma_coach span h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   padding: 5% 0 0 5%;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .team_coach .mma_coach span h3 {
+    padding: 0;
+  }
+}
+@media (max-width: 988px) {
+  .team_coach .mma_coach span h3 {
+    font-size: 2.3rem;
+  }
 }
 .team_coach .mma_coach span h4 {
   font-size: 1.5rem;
@@ -896,19 +943,42 @@ main {
 .team_coach .kickboxing_coach {
   flex-direction: row-reverse;
 }
+@media (max-width: 768px) {
+  .team_coach .kickboxing_coach {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
 .team_coach .kickboxing_coach span {
   width: 100%;
   margin-right: 5%;
 }
 .team_coach .kickboxing_coach span h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   padding: 5% 0 0 2%;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .team_coach .kickboxing_coach span h3 {
+    padding: 0;
+    padding-top: 1.5rem;
+  }
+}
+@media (max-width: 988px) {
+  .team_coach .kickboxing_coach span h3 {
+    font-size: 2.5rem;
+  }
 }
 .team_coach .kickboxing_coach span h4 {
   font-size: 1.5rem;
   padding: 0 0 0 25%;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .team_coach .kickboxing_coach span h4 {
+    padding: 0;
+  }
 }
 .team_coach .team_coach_story {
   width: 80%;
@@ -932,9 +1002,9 @@ main {
 }
 .team_competitor .competitor-card {
   background: #f4f4f4;
-  padding: 15px;
+  padding: 8px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
 }

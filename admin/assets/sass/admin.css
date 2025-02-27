@@ -74,8 +74,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -175,8 +174,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -moz-appearance: button;
-       appearance: button;
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -260,8 +258,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -moz-appearance: textfield;
-       appearance: textfield;
+  appearance: textfield;
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -585,7 +582,9 @@ template {
   background-color: #ffd2ad;
 }
 #index_body #index_main .section_competitor_management .list-competitor table tbody img {
-  width: 10rem;
+  max-width: 160px;
+  max-height: 120px;
+  object-fit: cover;
 }
 #index_body #index_main .section_competitor_management .list-competitor table tbody td, #index_body #index_main .section_competitor_management .list-competitor table tbody th {
   padding: 1rem 1.5rem; /* Ajoute 10px en haut/bas et 20px à gauche/droite */
@@ -624,9 +623,15 @@ template {
 }
 #index_body #index_main .section_competitor_management .competitor-modify-management form select {
   margin-bottom: 1.5rem;
+  background-color: #ffd2ad;
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
   border-width: 1px;
+}
+#index_body #index_main .section_competitor_management .competitor-modify-management form img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
 }
 #index_body #index_main .section_competitor_management .competitor-modify-management form .new-photo {
   margin-bottom: 1rem;
@@ -640,4 +645,6 @@ template {
   border-radius: 5px;
   border-width: 1px;
   margin-bottom: 1.5rem;
-}/*# sourceMappingURL=admin.css.map */
+}
+
+/*# sourceMappingURL=admin.css.map */

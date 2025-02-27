@@ -1,6 +1,14 @@
 .tarif-container{
-  
+  display: flex;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+
     .tarif-img{
-        width: 25%;
+        max-width: 320px;
+        margin: auto;
+
+        @media (max-width: 959px){
+            padding-bottom: 2rem;
+        }
     }
 }

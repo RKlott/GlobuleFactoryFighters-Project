@@ -84,4 +84,4 @@ $competitors = getCompetitors($pdo);
     </section>
 </main>
 
-<?php require './components/footer.php' ?>;
+<?php require './components/footer.php' ?>

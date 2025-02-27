@@ -197,7 +197,9 @@
 
                     tbody{
                         img{
-                            width: 10rem;
+                            max-width: 160px;
+                            max-height: 120px;
+                            object-fit: cover;
                         }
 
                         td, th {
@@ -243,7 +245,14 @@
 
                         select{
                             margin-bottom: 1.5rem;
+                            background-color: $orange-background-element;
                             @include rectangle-toggle-parameters;
+                        }
+
+                        img{
+                            max-width: 120px;
+                            max-height: 120px;
+                            object-fit: cover;
                         }
 
                         .new-photo{

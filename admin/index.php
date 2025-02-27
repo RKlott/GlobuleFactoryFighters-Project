@@ -257,7 +257,7 @@ $competitors = getCompetitors($pdo);
                             </select>
 
                             <label>Photo actuelle :</label><br>
-                            <img src="<?= $competitor['photo_path'] ?>" width="100"><br>
+                            <img src="<?= BASE_URL . htmlspecialchars($competitor['photo_path']) ?>" width="100"><br>
 
                             <label class="new-photo">Nouvelle photo (facultatif) :</label>
                             <input type="file" name="photo">
