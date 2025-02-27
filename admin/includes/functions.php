@@ -107,19 +107,23 @@ function getCompetitors(PDO $pdo)
  * @param PDO $pdo Instance PDO.
  * @return string Message de retour (succès ou erreur).
  */
-function addCompetitor(array $data, PDO $pdo) //TODO: J'ai modifié les chemins d'accès en rajoutant le "assets/", vérifier que ça ne fasse pas d'erreur de chemin d'upload
+function addCompetitor(array $data, PDO $pdo) 
 {
     try {
-        // Upload de l'image
-        $photoPath = "../public/assets/uploads/competitors/default.png"; // Image par défaut
+        // Charger la config pour BASE_URL
+        require_once dirname(__DIR__, 2) . '/config.php';
+
+        // Définir le chemin par défaut (sans "public/")
+        $photoPath = 'assets/uploads/competitors/default.png';
+
+        // Vérifier si une image a été uploadée
         if (!empty($_FILES['photo']['name'])) {
-            $targetDir = "../public/assets/uploads/competitors/";
+            $targetDir = dirname(__DIR__, 2) . '/public/assets/uploads/competitors/'; // Chemin serveur
             $fileName = time() . "_" . basename($_FILES['photo']['name']);
             $targetFilePath = $targetDir . $fileName;
 
-            // Vérification et déplacement du fichier
             if (move_uploaded_file($_FILES['photo']['tmp_name'], $targetFilePath)) {
-                $photoPath = "../public/assets/uploads/competitors/" . $fileName;
+                $photoPath = 'assets/uploads/competitors/' . $fileName;
             } else {
                 return "Erreur lors de l'upload de l'image.";
             }
@@ -142,6 +146,9 @@ function addCompetitor(array $data, PDO $pdo) //TODO: J'ai modifié les chemins 
         return "Erreur : " . $e->getMessage();
     }
 }
+
+
+
 
 /**
  * Supprime un compétiteur.

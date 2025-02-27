@@ -1,6 +1,7 @@
 <?php
 include './includes/db.php'; // Inclure la configuration et la connexion à la base de données
 include './includes/functions.php'; // Inclure les fonctions
+require_once dirname(__DIR__) . '/config.php';
 
 
 session_start();
@@ -199,7 +200,7 @@ $competitors = getCompetitors($pdo);
                     <tbody>
                         <?php foreach ($competitors as $competitor) : ?>
                             <tr>
-                                <td><img src="<?= htmlspecialchars($competitor['photo_path']) ?>" alt="Photo"></td>
+                                <td><img src="<?= BASE_URL . htmlspecialchars($competitor['photo_path']) ?>" alt="Photo de <?= htmlspecialchars($competitor['first_name'])?> <?= htmlspecialchars($competitor['last_name'])?>"></td>
                                 <td><?= htmlspecialchars($competitor['last_name']) ?></td>
                                 <td><?= htmlspecialchars($competitor['first_name']) ?></td>
                                 <td><?= htmlspecialchars($competitor['discipline']) ?></td>
