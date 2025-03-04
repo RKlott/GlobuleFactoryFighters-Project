@@ -954,6 +954,182 @@ main {
   }
 }
 
+.index_contact {
+  padding: 0 2rem;
+}
+.index_contact h2 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.index_contact p, .index_contact label {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.index_contact #logo_index_contact {
+  max-width: 50%;
+}
+@media (max-width: 894px) {
+  .index_contact #logo_index_contact {
+    max-width: 100%;
+  }
+}
+.index_contact .contact_us {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+@media (max-width: 894px) {
+  .index_contact .contact_us {
+    flex-direction: column;
+  }
+}
+@media (max-width: 894px) {
+  .index_contact .contact_infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.index_contact .contact_infos h2 {
+  text-decoration: underline;
+}
+.index_contact .contact_infos div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.index_contact .contact_infos div img {
+  width: 40px;
+  padding-right: 1rem;
+}
+.index_contact .contact_form_container {
+  max-width: 48%;
+}
+.index_contact .contact_form_container h2 {
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+@media (max-width: 894px) {
+  .index_contact .contact_form_container {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
+.index_contact .contact_form_container form {
+  display: flex;
+  flex-direction: column;
+  /* Customize the label (the container) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.index_contact .contact_form_container form input,
+.index_contact .contact_form_container form textarea {
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: #ffd2ad;
+  margin-bottom: 1rem;
+  box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.397);
+}
+.index_contact .contact_form_container form .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.index_contact .contact_form_container form .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.index_contact .contact_form_container form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+  background-color: #eee;
+}
+.index_contact .contact_form_container form .container:hover input ~ .checkmark {
+  background-color: #ffd2ad;
+}
+.index_contact .contact_form_container form .container input:checked ~ .checkmark {
+  background-color: #E1592C;
+}
+.index_contact .contact_form_container form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.index_contact .contact_form_container form .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.index_contact .contact_form_container form .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.index_contact .contact_form_container form button {
+  background-color: #E1592C;
+  border: 1px solid #FCFCFC;
+  border-radius: 8px;
+}
+.index_contact .contact_form_container form button img {
+  max-width: 40px;
+  padding: 0.3rem 0;
+}
+.index_contact .contact_form_container form .line_form {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 894px) {
+  .index_contact .contact_form_container form .line_form {
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+.index_contact .contact_form_container form .line_form div {
+  display: flex;
+  flex-direction: column;
+}
+.index_contact .contact_find_us {
+  width: 50%;
+}
+@media (max-width: 894px) {
+  .index_contact .contact_find_us {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}
+.index_contact .contact_find_us h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.index_contact .contact_find_us #map {
+  height: 500px;
+}
+
 .planning-container {
   text-align: center;
   padding: 10px;

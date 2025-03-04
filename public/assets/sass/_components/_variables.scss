@@ -2,6 +2,7 @@ $background-black: #110B0A;
 $main-white: #FCFCFC;
 $main-orange: #E1592C;
 $sub-orange: #f4a261;
+$orange-background-element: #ffd2ad;
 
 $footer-background-black: #282828;
 
@@ -12,6 +13,8 @@ $footer-background-black: #282828;
     position: relative;
     font-size: 20px;
 }
+
+
 
 .underline-effect::after {
     content: "";

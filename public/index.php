@@ -29,6 +29,7 @@ require './pages/components/header.php';
 
 <!--//TODO: Corriger le menu burger, rajouter une croix pour le fermer, corriger le underline-effect qui affiche son element au dessus du menu, faire page contact-->
 
+<!--//TODO: Faire vérifier la sécurité du code se trouvant dans le frontoffice du projet, et voir comment accéder au panel admin en production-->
 <main class="index_main">
     <section class="index_header">
         <div class="index_header_title_container">
