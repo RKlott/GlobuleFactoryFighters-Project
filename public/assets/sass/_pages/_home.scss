@@ -37,6 +37,10 @@ main{
   width: 40%;
   img {
     max-width: 80%;
+
+    @media (max-width: $breakpoint){
+      max-width: 100%;
+    }
   }
   p {
     text-align: center;

@@ -621,6 +621,11 @@ main {
 .index_team_description img {
   max-width: 80%;
 }
+@media (max-width: 768px) {
+  .index_team_description img {
+    max-width: 100%;
+  }
+}
 .index_team_description p {
   text-align: center;
 }

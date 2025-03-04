@@ -34,7 +34,7 @@ use Dotenv\Dotenv;
 require "../../vendor/autoload.php"; // Charger PHPMailer via Composer //? Modifier ce chemin manuellement en production
 
 // Charge les variables d'environnement
-$dotenv = Dotenv::createImmutable(__DIR__); // __DIR__ pour être sûr que c'est bien dans le bon répertoire
+$dotenv = Dotenv::createImmutable(__DIR__ . "/../../"); // __DIR__ pour être sûr que c'est bien dans le bon répertoire
 $dotenv->load();
 
 if (isset($_POST["submit"])) {
