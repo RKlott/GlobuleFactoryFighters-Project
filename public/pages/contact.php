@@ -80,13 +80,9 @@ if (isset($_POST["submit"])) {
             $mail->Body = htmlspecialchars_decode("Nom: $nom\nPrénom: $prenom\nEmail: $email\nTéléphone: $telephone\nObjet: $objet\n\nMessage:\n\n$message");
 
             $mail->send();
-            echo "<p style='background-color: rgb(134, 238, 134);
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border-width: 1px;'>Votre message a bien été envoyé !</p>";
+            echo "<p class='success-style'>Votre message a bien été envoyé !</p>";
         } catch (Exception $e) {
-            echo "<p style='color:red;'>Erreur lors de l'envoi du message : {$mail->ErrorInfo}</p>";
+            echo "<p class='error-style'>Erreur lors de l'envoi du message : {$mail->ErrorInfo}</p>";
         }
     } else {
         foreach ($errors as $error) {

@@ -959,6 +959,22 @@ main {
   }
 }
 
+.success-style {
+  background-color: rgb(134, 238, 134);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-width: 1px;
+}
+
+.error-style {
+  background-color: rgb(238, 134, 134);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-width: 1px;
+}
+
 .index_contact {
   padding: 0 2rem;
 }
