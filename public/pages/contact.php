@@ -37,6 +37,7 @@ require "../../vendor/autoload.php"; // Charger PHPMailer via Composer //? Modif
 $dotenv = Dotenv::createImmutable(__DIR__ . "/../../"); // __DIR__ pour être sûr que c'est bien dans le bon répertoire
 $dotenv->load();
 
+
 if (isset($_POST["submit"])) {
     $nom = htmlspecialchars(trim($_POST["nom"]));
     $prenom = htmlspecialchars(trim($_POST["prenom"]));
@@ -59,22 +60,24 @@ if (isset($_POST["submit"])) {
         try {
             // Configuration du serveur SMTP
             $mail->isSMTP();
-            $mail->Host = getenv('SMTP_HOST'); // Serveur SMTP (ex: smtp.gmail.com, smtp.office365.com)
+            $mail->Host = $_ENV['SMTP_HOST']; // Serveur SMTP (ex: smtp.gmail.com, smtp.office365.com)
             $mail->SMTPAuth = true;
-            $mail->Username = getenv('SMTP_USERNAME'); // Remplace par ton email
-            $mail->Password = getenv('SMTP_PASSWORD'); // Remplace par ton mot de passe ou un mot de passe d’application
+            $mail->Username = $_ENV['SMTP_USERNAME']; // Remplace par ton email
+            $mail->Password = $_ENV['SMTP_PASSWORD']; // Remplace par ton mot de passe ou un mot de passe d’application
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
             $mail->Port = 587; // Port SMTP (587 pour TLS, 465 pour SSL)
 
             // Expéditeur et destinataire
-            $mail->setFrom(getenv('SMTP_USERNAME'), "$nom $prenom");
-            $mail->addAddress(getenv('SMTP_RECEIVING_ADDRESS')); // Remplace par ton email de réception
+            $mail->setFrom($_ENV['SMTP_USERNAME'], "$nom $prenom");
+            $mail->addAddress($_ENV['SMTP_RECEIVING_ADDRESS']); // Remplace par ton email de réception
             $mail->addReplyTo($email, "$prenom $nom"); // L'email saisi par l'utilisateur est ici
 
             // Contenu du mail
             $mail->isHTML(false);
-            $mail->Subject = "[$objet] Nouveau message de contact";
-            $mail->Body = "Nom: $nom\nPrénom: $prenom\nEmail: $email\nTéléphone: $telephone\nObjet: $objet\n\nMessage:\n$message";
+            $mail->CharSet = 'UTF-8';
+            $mail->Subject = htmlspecialchars_decode("[$objet] Nouveau message Globule Factory Fighters");
+            
+            $mail->Body = htmlspecialchars_decode("Nom: $nom\nPrénom: $prenom\nEmail: $email\nTéléphone: $telephone\nObjet: $objet\n\nMessage:\n\n$message");
 
             $mail->send();
             echo "<p style='color:green;'>Votre message a bien été envoyé !</p>";
