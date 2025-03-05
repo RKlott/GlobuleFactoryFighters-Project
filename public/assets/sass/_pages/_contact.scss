@@ -1,5 +1,9 @@
 $contact-responsive: 894px;
 
+.success-style{
+  @include success-style;
+}
+
 .index_contact {
   padding: 0 2rem;
 
